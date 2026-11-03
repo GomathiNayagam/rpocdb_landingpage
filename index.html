@@ -275,11 +275,11 @@
       <div>
         <h2 style="font-size:32px;font-weight:800;">Primers &amp; library prep</h2>
         <p style="color:var(--ink-500);font-size:16px;margin-top:14px;line-height:1.65;">
-          A standard two-step PCR protocol: locus-specific amplification of <em style="font-style:italic;">rpoC</em>,
-          followed by an indexing PCR that adds Illumina adapters and sample barcodes.
+          A standard two-step PCR protocol: locus-specific amplification of <em style="font-style:italic;">rpoC</em>
+          (520-bp product), followed by an indexing PCR that adds Illumina adapters and sample barcodes.
         </p>
         <ol style="margin-top:20px;padding-left:20px;color:var(--ink-700);font-size:14.5px;line-height:2;">
-          <li>Locus-specific PCR with rpoCF / rpoCR (40 cycles)</li>
+          <li>Locus-specific PCR with rpoCF / rpoCR — validated with three polymerases (below)</li>
           <li>Indexing PCR — Illumina adapters and barcodes</li>
           <li>Pooling, normalization, and sequencing</li>
         </ol>
@@ -291,6 +291,47 @@
         <div style="height:1px;background:rgba(255,255,255,0.12);margin:20px 0;" aria-hidden="true"></div>
         <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#9CA3E8;text-transform:uppercase;">Reverse primer · rpoCR</div>
         <div class="mono" style="color:#fff;font-size:16px;margin-top:8px;">5′ – GMCATYTGRTCNCCRTCRAA – 3′</div>
+        <div style="height:1px;background:rgba(255,255,255,0.12);margin:20px 0;" aria-hidden="true"></div>
+        <div style="font-size:12px;font-weight:600;letter-spacing:0.06em;color:#9CA3E8;text-transform:uppercase;">Reaction setup</div>
+        <div style="color:rgba(255,255,255,0.8);font-size:13.5px;margin-top:8px;line-height:1.7;">
+          25 µL total · 1 µL template DNA · 0.5 µM each primer
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:48px;">
+      <h3 style="font-size:17px;font-weight:700;">Tested PCR programs, by polymerase</h3>
+      <div style="overflow-x:auto;margin-top:16px;">
+        <table style="width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;min-width:640px;">
+          <thead>
+            <tr style="background:var(--surface-tint-purple);">
+              <th style="text-align:left;padding:12px 16px;font-size:13px;font-weight:700;color:var(--ink-900);">Polymerase</th>
+              <th style="text-align:left;padding:12px 16px;font-size:13px;font-weight:700;color:var(--ink-900);">Initial denaturation</th>
+              <th style="text-align:left;padding:12px 16px;font-size:13px;font-weight:700;color:var(--ink-900);">Cycling (30×)</th>
+              <th style="text-align:left;padding:12px 16px;font-size:13px;font-weight:700;color:var(--ink-900);">Final extension</th>
+            </tr>
+          </thead>
+          <tbody class="mono" style="font-size:13px;color:var(--ink-700);">
+            <tr style="border-top:1px solid var(--line);">
+              <td style="padding:12px 16px;font-weight:600;">Q5</td>
+              <td style="padding:12px 16px;">98°C, 30 s</td>
+              <td style="padding:12px 16px;">98°C 10 s → 53°C 30 s → 72°C 30 s</td>
+              <td style="padding:12px 16px;">72°C, 2 min</td>
+            </tr>
+            <tr style="border-top:1px solid var(--line);">
+              <td style="padding:12px 16px;font-weight:600;">Platinum II HS</td>
+              <td style="padding:12px 16px;">94°C, 3 min</td>
+              <td style="padding:12px 16px;">94°C 45 s → 45°C 1 min → 72°C 1 min</td>
+              <td style="padding:12px 16px;">72°C, 10 min</td>
+            </tr>
+            <tr style="border-top:1px solid var(--line);">
+              <td style="padding:12px 16px;font-weight:600;">KAPA HiFi</td>
+              <td style="padding:12px 16px;">95°C, 3 min</td>
+              <td style="padding:12px 16px;">98°C 20 s → 58°C 30 s → 72°C 30 s</td>
+              <td style="padding:12px 16px;">72°C, 1 min</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
